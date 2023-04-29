@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Tray } = require("electron");
 const path = require("path");
 
 const devMode = false;
@@ -18,7 +18,7 @@ const createWindow = () => {
             webviewTag: true,
             preload: path.join(__dirname, "preload.js"),
         },
-        icon: "./images/icon.png",
+        icon: __dirname + '/images/icon.ico',
     });
 
     mainWindow.setMenuBarVisibility(false);
@@ -42,7 +42,7 @@ app.on("ready", createWindow);
 app.on("ready", () => {
     require("update-electron-app")({
         repo: "TheNicolasDeveloper/nicochat-desktop",
-        updateInterval: "5 minutes"
+        updateInterval: "5 minutes",
     });
 });
 
