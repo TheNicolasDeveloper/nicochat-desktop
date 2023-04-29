@@ -34,7 +34,7 @@ module.exports = {
             name: "@electron-forge/maker-deb",
             config: {
                 options: {
-                    icon: "./images/icon.png",
+                    icon: "C:/Users/Nicolas/Desktop/nicochat app/nicochat/src/images/icon.png",
                 },
             },
         },

@@ -1,7 +1,7 @@
 {
     "name": "nicochat",
     "productName": "NicoChat",
-    "version": "1.0.1",
+    "version": "1.0.1-testupdate",
     "description": "NicoChat chat application",
     "main": "src/index.js",
     "scripts": {
@@ -27,6 +27,7 @@
         "@electron-forge/maker-rpm": "^6.1.1",
         "@electron-forge/maker-squirrel": "^6.1.1",
         "@electron-forge/maker-zip": "^6.1.1",
+        "@electron-forge/publisher-github": "^6.1.1",
         "electron": "24.1.3"
     }
 }

@@ -18,7 +18,7 @@ const createWindow = () => {
             webviewTag: true,
             preload: path.join(__dirname, "preload.js"),
         },
-        icon: __dirname + '/images/icon.ico',
+        icon: path.join(__dirname, "images", "icon.png"),
     });
 
     mainWindow.setMenuBarVisibility(false);
@@ -39,11 +39,9 @@ const createWindow = () => {
 // Some APIs can only be used after this event occurs.
 app.on("ready", createWindow);
 
-app.on("ready", () => {
-    require("update-electron-app")({
-        repo: "TheNicolasDeveloper/nicochat-desktop",
-        updateInterval: "5 minutes",
-    });
+require("update-electron-app")({
+    repo: "TheNicolasDeveloper/nicochat-desktop",
+    updateInterval: "5 minutes",
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
