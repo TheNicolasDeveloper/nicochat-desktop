@@ -3,6 +3,18 @@ module.exports = {
         icon: "C:/Users/Nicolas/Desktop/nicochat app/nicochat/src/images/icon", // no file extension required
     },
     rebuildConfig: {},
+    publishers: [
+        {
+            name: "@electron-forge/publisher-github",
+            config: {
+                repository: {
+                    owner: "TheNicolasDeveloper",
+                    name: "nicochat-desktop",
+                },
+                prerelease: true,
+            },
+        },
+    ],
     makers: [
         {
             name: "@electron-forge/maker-squirrel",
