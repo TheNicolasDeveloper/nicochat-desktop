@@ -11,7 +11,7 @@ module.exports = {
                     owner: "TheNicolasDeveloper",
                     name: "nicochat-desktop",
                 },
-                prerelease: true,
+                prerelease: false,
             },
         },
     ],
