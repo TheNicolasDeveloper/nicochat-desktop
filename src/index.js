@@ -26,6 +26,10 @@ const createWindow = () => {
     // and load the index.html of the app.
     mainWindow.loadFile(path.join(__dirname, "index.html"));
 
+    require("update-electron-app")({
+        repo: "TheNicolasDeveloper/nicochat-desktop",
+    });
+
     mainWindow.webContents.on("did-finish-load", () => {
         // Open the DevTools.
         if (devMode) {
@@ -38,11 +42,6 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", createWindow);
-
-require("update-electron-app")({
-    repo: "TheNicolasDeveloper/nicochat-desktop",
-    updateInterval: "5 minutes",
-});
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
